@@ -8,8 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyCat extends Cat
 {
-    int imageWidth = getImage().getWidth();
-    int imageHeigth = getImage().getHeight();
+
     /**
      * Act - do whatever the MyCat wants to do.
      */

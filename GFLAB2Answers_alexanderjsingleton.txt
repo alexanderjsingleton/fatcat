@@ -1,0 +1,173 @@
+USE THE NAVIGATION ARROWS ON THE TOP RIGHT TO NAVIGATE FROM STEP TO STEP IN THIS ASSIGNMENT
+
+Download and unzip the ExploreCat Scenario that is found in this folder.
+Then go into the folder and click on the Greenfoot project file to load the scenario.
+
+Compile the Scenario. 
+
+STEP 1: Interactively execute the methods and record the results:
+
+World Methods inherited by CatWorld.  If the method returns a value, write down the returned value.
+You will need to right click the mouse inside the world window, but off of the cat image.
+
+getCellSize()               ______1______
+
+getHeight()                 ______340______
+
+getWidth()                  ______600______
+
+getNumberOfObjects()  ___1________
+
+Interactively place a second MyCat object in the world, then call
+getNumberOf(Objects()  _____________2__________
+
+
+Now we want to try interactively calling MyCat methods.
+
+When you interactively right click on a MyCat you have 2 options:
+Inherited from Actor
+
+Inherited from Cat
+Reset the World so that we have only a single cat in the world.
+
+Answer the following questions
+and indicate which class contained the needed method:
+
+                    VALUE RETURNED         METHOD CALLED        CLASS CONTAINING THE METHOD
+
+rotation          ____0_________          ______getRotation_________     _actor__________________
+
+hasCompany  _______false______          _______has company________     ___cat_________________
+
+x                  ______300________         _______getX________     ______Actor______________
+  RECALL x is the distance in pixels from the left edge of the world
+
+y                  ______200_______          ________getY_________   ______Actor______________
+   RECALL y is the distance in pixels from the top edge of the world
+
+
+isSleepy       _______false_______        _______isSleepy_________   _______Cat_____________
+
+Now we want the cat to interactively perform the following activities.
+
+Write down the needed method and in which class that method was located:
+
+                                METHOD CALLED           CLASS CONTAINING THE METHOD
+
+shout Hooray             ___shoutHooray_____________           ______Cat_______
+
+walk left 5 paces        ____walkLeft____________             _______Cat___________
+          what did you supply as a parameter?__________________
+
+turn upside down    ____setrotation_________             _____Actor_____________     HINT:  rotation determines the orientation, 0 - 360
+                     what did you supply as a parameter? _____180_________
+
+turn back to stand up   _____setRotation________             __________Actor_______     HINT:  rotation determines the orientation, 0 - 360
+ 
+                     what did you supply as a parameter? _____0________
+
+move 50 pixels in the current direction, 
+            as measured by the rotation:    _____move(50)__________    _____Actor____________
+
+                     what did you supply as a parameter?  _____50____________
+
+What is the difference between moving and walking? walk cat changes position vs. move stays upright.
+
+STEP 2:  Understanding Images
+                                                                                             METHOD CALLED                  CLASS CONTAINING THE METHOD
+
+NOTE:  USE ONLY A SINGLE INSTRUCTOR HERE
+Directly place the cat in the upper left corner, x = 0, y = 0    ________setLocation_____________       ________Actor_________________
+
+                      what did you supply as parameters?                          ______0,0________________
+
+
+Observe that we only see 1/4 of the cat now.  The reason is that the x and y are for the center of the cat.
+Look inside the images folder for the Scenario and you will see all of the images used in the Scenario.
+I used an image editor and discovered that the cat image was 290 pixels Horizontal ( x value ) and
+230 pixels Vertical (y value). 
+I also used the editor and code placed the following code inside of the class definition:
+    int imageWidth = getImage().getWidth();
+    int imageHeigth = getImage().getHeight();
+And then I right clicked on the cat object and selected Inspect to verify the values of 290 and 230.
+When I interactively execute setLocation(145, 115) I do not get what I was hoping for.
+The reason this does not work is because the image is drawn on "a sheet of paper" and all of the blank space around the actual cat counts in the width and height.
+To solve the problem:
+
+- interactively, by dragging, position the cat in the upper left so that it just fits
+
+- interactively right click on the cat and choose Inspect
+
+I got x is 71 and y is 93.
+
+Click the Reset button and then interactively execute setLocation(71,93) - Hope that works for you
+
+```
+STEP 3:  Execute a group of methods in sequence
+
+So far we have interactively executed code, but that is not programming because none of the code has been saved.
+Note the cat is at x = 300, y = 200
+Here is the code to make the cat pace one time:
+walkLeft(5);
+walkRight(10);
+walkLeft(5);
+Try the code interactively by right clicking on the cat 3 times and selecting the appropriate method each time.
+Verify that it behaves properly and note the x and y values after the 3rd method call.
+Did the cat end up where it started?       __________________
+How using the editor for the MyCat class 
+- copy the code from this document
+- after the opening { under public void act() hit the enter key to get a blank line
+- paste the code on that blank line
+- the code alignment might not look good, so under the top line menu    Class   Edit   Tools   Options
+       under Edit select Auto-layout. 
+             REMEMBER  THIS "TRICK" FOR THE REST OF THE COURSE TO SAVE YOURSELF TIME
+
+Now Compile your program and then select the >Act Icon and observe what happened Select the >Act Icon again, what happened?
+Now select the >Run Icon and observe what happens.
+Try adjusting the Speed Slider Icon
+
+```
+
+```
+STEP 4( Last step):  Explore other methods inherited by MyCat class from the Cat class:
+Interactively execute the following methods and write down the results. If a parameter was required, write down the parameter value you used.
+a)  isAlone()
+    true, no parameter.
+ 
+ 
+ 
+b) isBored()
+true, no parameter.
+    
+ 
+ 
+ 
+c) isHungry()
+false, no parameter.
+ 
+ 
+ 
+d) hasCompany()
+false, no parameter.
+ 
+ 
+ 
+ 
+e) eat()
+cat eats pizza, no parameter.
+ 
+ 
+ 
+f) dance()
+dances to “Stayin’ Alive” no parameter/jacket required.
+ 
+ 
+ 
+g)  sleep()                 parameter used: _____5__________
+ 
+ sleeps for 5 sets of z’s.
+ 
+h) wait()                   parameter used: _____5___________
+Stands still for the amount.
+
+```
